@@ -73,7 +73,7 @@ class UsersController < ApplicationController
       params.require(:user).permit(
         :username,
         :age,
-        addresses_attributes: [:id, :zipcode, :city, :street, :tel]
+        addresses_attributes: [:id, :zipcode, :city, :street, :tel, :_destroy]
       )
     end
 end
