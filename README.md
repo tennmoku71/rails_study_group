@@ -1,58 +1,24 @@
-Rails on Docker
-===
+# README
 
-## Usage
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-#### Launch New Project
+Things you may want to cover:
 
-Execute following commands:
-```
->> docker-compose run web rails new . --force --database=postgresql
-```
+* Ruby version
 
-And Replace the contents of config/database.yml with the followings:
-```
-default: &default
-  adapter: postgresql
-  encoding: unicode
-  host: db
-  username: postgres
-  password:
-  pool: 5
+* System dependencies
 
-development:
-  <<: *default
-  database: myapp_development
+* Configuration
 
+* Database creation
 
-test:
-  <<: *default
-  database: myapp_test
-```
+* Database initialization
 
-Execute following commands:
-```
->> sudo chown -R $USER .
->> docker-compose build
->> docker-compose up
->> docker-compose run web rails db:create
-```
+* How to run the test suite
 
-#### Resume Develop
+* Services (job queues, cache servers, search engines, etc.)
 
-```
-docker-compose up -d
-```
+* Deployment instructions
 
-or
-
-```
-docker-compose up --build -d
-```
-
-
-## License
-Copyright © 2018 Docker Inc. All rights reserved.
-
-## Reference
-https://docs.docker.com/compose/rails/
+* ...
