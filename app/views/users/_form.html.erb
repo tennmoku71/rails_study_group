@@ -21,6 +21,20 @@
     <%= form.number_field :age %>
   </div>
 
+  <div class="field">
+    <%= form.label :addresses, "住所" %><br />
+    <%= form.fields_for :addresses do |addresses_form| %>
+      <%= addresses_form.label :zipcode, "郵便番号" %>
+      <%= addresses_form.text_field :zipcode %><br />
+      <%= addresses_form.label :city, "都道府県" %>
+      <%= addresses_form.text_field :city %><br />
+      <%= addresses_form.label :street, "市町村番" %>
+      <%= addresses_form.text_field :street %><br />
+      <%= addresses_form.label :tel, "電話番号" %>
+      <%= addresses_form.text_field :tel %><br />
+    <% end %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
